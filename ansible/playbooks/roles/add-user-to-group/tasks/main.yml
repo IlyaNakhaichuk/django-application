@@ -1,0 +1,6 @@
+---
+- name: Add the user 'ec2-user' with a primary group of 'docker'
+  user:
+    name: ec2-user
+    group: docker
+    append: yes

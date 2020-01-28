@@ -1,0 +1,16 @@
+---
+- name: Install Packages
+  yum: name={{ item }} state=latest
+  with_items:
+    - docker
+    - python
+    - python-pip
+    - git
+    - curl
+    - telnet
+
+- name: install certain python modules for docker
+  pip:
+    name:
+      - docker
+      - jsondiff

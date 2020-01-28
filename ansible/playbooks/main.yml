@@ -1,0 +1,9 @@
+---
+- name: setup pre-requisites
+  become: yes
+  hosts: all
+  roles:
+    - install-modules
+    - start-service
+    - add-user-to-group
+    - docker-portainer
